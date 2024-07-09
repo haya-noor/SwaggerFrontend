@@ -136,9 +136,7 @@ const swaggerSpec = {
   "info": {
     "title": "example-server-tsoa",
     "version": "1.0.0",
-    "license": {
-      "name": "MIT"
-    },
+    "description": "Example server with TSOA",
     "contact": {}
   },
   "paths": {
