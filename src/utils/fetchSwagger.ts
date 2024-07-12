@@ -1,16 +1,10 @@
-
-
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import crypto from 'crypto';
-//import { AbstractGoogleDrive } from './AbstractGoogleDrive';
-import { AbstractGoogleDrive } from '../utils/AbstractGoogleDrive.ts';
-
-//import { GoogleDrive } from './GoogleDrive';
-import { GoogleDrive } from '../utils/GoogleDrive.ts';
-
+import { StorageService } from './StorageService.ts';
+import { GoogleDrive } from './GoogleDrive.ts';
 
 dotenv.config();
 
@@ -52,7 +46,7 @@ function convertJsonToTs(jsonFilePath: string, tsFilePath: string) {
   fs.writeFileSync(tsFilePath, tsContent, 'utf-8');
 }
 
-async function fetchSwagger(driveService: AbstractGoogleDrive) {
+async function fetchSwagger(driveService: StorageService) {
   const folderId = process.env['GOOGLE_DRIVE_FOLDER_ID'];
   const branchName = process.env['BRANCH_NAME'];
 

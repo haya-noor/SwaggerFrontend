@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export abstract class AbstractGoogleDrive {
+export abstract class StorageService {
   protected auth: any;
   protected drive: any;
 
@@ -15,7 +15,7 @@ export abstract class AbstractGoogleDrive {
 
     this.auth = new google.auth.GoogleAuth({
       keyFile,
-      scopes: ['https://www.googleapis.com/auth/drive.readonly'],
+      scopes: ['https://www.googleapis.com/auth/drive.file'],
     });
 
     this.drive = google.drive({ version: 'v3', auth: this.auth });

@@ -1,8 +1,9 @@
 import fs from 'fs';
 import fetch from 'node-fetch'; 
-import { AbstractGoogleDrive } from './AbstractGoogleDrive.ts';
+//import { StorageService } from './StorageService';
+import { StorageService } from './StorageService.ts';
 
-export class GoogleDrive extends AbstractGoogleDrive {
+export class GoogleDrive extends StorageService {
   async fetchFile(fileName: string, folderId: string): Promise<any[]> {
     try {
       const searchResponse = await this.drive.files.list({
