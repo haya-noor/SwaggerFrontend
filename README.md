@@ -1,4 +1,4 @@
-### Typesafe Client Generator
+### TypeSafeClient
 
 #### Project Overview
 This project ensures type safety between the frontend and backend by fetching the OpenAPI schema from Google Drive, converting it to TypeScript using `openapi-typescript`, and creating route functions for API requests with `openapi-fetch`. It ensures the correct schema is fetched based on the current branch and hash, reducing unnecessary fetches and uploads.
